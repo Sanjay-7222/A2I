@@ -355,7 +355,7 @@ footer h2 {
 }
 
 .navigation ul li:hover{
-  border-bottom: 4px solid #000080;
+  border-bottom: 4px solid #fff;
   box-shadow: 0px 0px 8px 0px #838383;
 }
 /* .navigation ul li.active a{
