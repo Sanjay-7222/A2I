@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+}
+
+.mark {
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-left: 5px solid black;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.marvel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Default: all items take 45% width */
+.gallery-item {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  flex: 1 1 calc(25% - 20px); /* 4 per row on large screens */
+}
+
+@media (max-width: 1024px) {
+  .gallery-item {
+    flex: 1 1 calc(33.333% - 20px); /* 3 per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 20px); /* 2 per row on small tablets/large phones */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 100%; /* 1 per row on small phones */
+  }
+}
+
+
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease;
+  border: 2px solid #000080;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.thunder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  font-size: 1.2rem;
+}
+
+.thunder:hover{
+  background: rgba(255,215,0,0.9);
+}
+
+  </style>
+</head>
+<body>
+
+  <h1 class="mark"> GALLERY</h1>
+
+  <div class="marvel">
+    <div class="gallery-item">
+      <img src="images/logo.png" alt="Acqua Gallery">
+      <div class="thunder">View Acqua Gallery</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/logo.png" alt="Lafayette Gallery">
+      <div class="thunder">View Lafayette Gallery</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/logo.png" alt="Foundry Gallery">
+      <div class="thunder">View Foundry Gallery</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/logo.png" alt="Foundry Gallery">
+      <div class="thunder">View Foundry Gallery</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/logo.png" alt="Foundry Gallery">
+      <div class="thunder">View Foundry Gallery</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/logo.png" alt="Foundry Gallery">
+      <div class="thunder">View Foundry Gallery</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/logo.png" alt="Foundry Gallery">
+      <div class="thunder">View Foundry Gallery</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/logo.png" alt="Foundry Gallery">
+      <div class="thunder">View Foundry Gallery</div>
+    </div>
+  </div>
+
+</body>
+</html>

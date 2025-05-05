@@ -57,7 +57,7 @@ p{
   border-bottom: 0px dotted #565656;
 }
 .widget-contact ul li .fa{
-  color: #000080;
+  color: #ffd700;
   font-size: 17px;
   display: table-cell;
   width: 24px;
@@ -71,7 +71,7 @@ p{
   color: #acacac;
 }
 .widget-contact ul li:hover, .widget-contact ul li:hover span a{
-	color: #000080;
+	color: #ffd700;
 }
 .widget-contact ul li:hover .fa{
 	color: #868686;
@@ -179,7 +179,7 @@ p{
 	transition: all .6s ease;
 }
 .widget-quick-links ul li a .fa{
-  color: #000080;
+  color: #ffd700;
   font-size: 18px;
   padding-right: 8px;
   -webkit-transition: all .6s ease;
@@ -189,7 +189,7 @@ p{
   transition: all .6s ease;
 }
 .widget-quick-links ul li a:hover{
-  color: #000080;
+  color: #ffd700;
   -webkit-transform: translateX(5px);
   -moz-transform: translateX(5px);
   -ms-transform: translateX(5px);
@@ -213,8 +213,8 @@ p{
 .widget-tag ul li{
   list-style: none;
   display: inline-block;
-  border-left: 1px solid #000080;
-  border-right: 1px solid #000080;
+  border-left: 1px solid #ffd700;
+  border-right: 1px solid #ffd700;
   border-top: 1px solid #737272;
   border-bottom: 1px solid #737272;
   padding: 4px;
@@ -374,4 +374,56 @@ footer .thumb a{
 footer .widget-article .text {
     color: #acacac;
     text-align: center;
+}
+
+#home {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#home h2 {
+  font-size: 2rem;
+  color: #000080;
+  margin-bottom: 10px;
+}
+
+#home h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+#home a {
+  color: #000080;
+  text-decoration: none;
+}
+
+#home .quote {
+  font-style: italic;
+  color: #666;
+  margin-top: 20px;
+}
+
+#home h4 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-top: 30px;
+}
+
+.fa-phone {
+  margin-right: 5px;
+  color: #d62828;
+}
+
+.fa-star {
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #ffd700;
 }
