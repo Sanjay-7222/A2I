@@ -69,37 +69,37 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="guest-name">Name</label>
-												<input type="text" class="form-control" id="guest-name" name="guest-name">
+												<input type="text" class="form-control" id="guest-name" name="user_name">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="guest-phone">Phone Number</label>
-												<input type="text" class="form-control" id="guest-phone" name="guest-phone">
+												<input type="text" class="form-control" id="guest-phone" name="user_phone">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="guest-mail">Mail ID</label>
-												<input type="email" class="form-control" id="guest-mail" name="guest-mail">
+												<input type="email" class="form-control" id="guest-mail" name="user_mail">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="guest-city">Your City</label>
-												<input type="text" class="form-control" id="guest-city" name="guest-city">
+												<input type="text" class="form-control" id="guest-city" name="user_city">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="event-date">Event Date</label>
-												<input type="date" class="form-control" id="event-date" name="event-date">
+												<input type="date" class="form-control" id="event-date" name="event_date">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label for="required-service">Required Service</label>
-												<select class="form-control" id="required-service" name="required-service">
+												<select class="form-control" id="required-service" name="required_service">
 													<option value="">Birthday Party</option>
 													<option value="Birthday Party">Birthday Party</option>
 													<option value="Puberty Function">Puberty Function</option>
@@ -116,7 +116,7 @@
 										<div class="col-md-12">
 											<div class="form-group">
 												<label for="guest-message">Message</label>
-												<textarea class="form-control" name="guest-message" id="guest-message" rows="3"></textarea>
+												<textarea class="form-control" name="guest-message" id="user_message" rows="3"></textarea>
 											</div>
 										</div>
 									</div>
@@ -247,6 +247,23 @@
             &copy; Copyright 2025 All Rights Reserved.
         </p>
     </div>
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("5SRJHAAJDxXjcbD5T"); // Replace with your EmailJS public key
+  })();
+
+  document.getElementById('landing-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    emailjs.sendForm('service_hj4cifj', 'template_71f5wdq', this)
+      .then(function() {
+        alert('Message sent successfully!');
+      }, function(error) {
+        alert('Failed to send message: ' + JSON.stringify(error));
+      });
+  });
+</script>
     <script src="landing-page/js/jquery-2.1.1.min.js"></script>
     <script src="landing-page/js/modernizr.js"></script>
     <script src="landing-page/js/bootstrap.min.js"></script>
@@ -258,5 +275,6 @@
     <script src="landing-page/js/jquery.fancybox.pack.js"></script>
     <script src="landing-page/js/masonry.pkgd.min.js"></script>
     <script src="landing-page/js/main.js"></script>
+	<script src="js/email.js"></script>
 	</body>
 </html>
