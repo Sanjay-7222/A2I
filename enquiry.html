@@ -63,7 +63,7 @@
 						
 					<div class="row">
 						<div class="col-md-12">
-							<form action="#" method="POST">
+							<form id="checkout" action="#" method="POST">
 								<div class="landing-form">
 									<div class="row">
 										<div class="col-md-6">
@@ -116,7 +116,7 @@
 										<div class="col-md-12">
 											<div class="form-group">
 												<label for="guest-message">Message</label>
-												<textarea class="form-control" name="guest-message" id="user_message" rows="3"></textarea>
+												<textarea class="form-control" name="user_message" id="user_message" rows="3"></textarea>
 											</div>
 										</div>
 									</div>
@@ -253,8 +253,9 @@
     emailjs.init("5SRJHAAJDxXjcbD5T"); // Replace with your EmailJS public key
   })();
 
-  document.getElementById('landing-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+  	document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('checkout').addEventListener('submit', function(event) {
+        event.preventDefault();
   
     emailjs.sendForm('service_hj4cifj', 'template_71f5wdq', this)
       .then(function() {
@@ -262,6 +263,7 @@
       }, function(error) {
         alert('Failed to send message: ' + JSON.stringify(error));
       });
+    });
   });
 </script>
     <script src="landing-page/js/jquery-2.1.1.min.js"></script>
